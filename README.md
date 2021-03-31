@@ -26,8 +26,6 @@ java -cp target/FrequentialAnalysis-1.0.jar cipher.Main Process pathToInputText 
 
 ### Caeser 
 
-<br/>
-
 #### - Cipher
 
 To cipher the processed text using the Caesar cipher use the following command : 
@@ -38,8 +36,6 @@ java -cp target/FrequentialAnalysis-1.0.jar cipher.Main Caesar pathToProcessedTe
 
 (if pathToCipheredText doesn't exist, it will be created and the key must be between 0 and 25)
 
-<br/>
-
 #### - Decipher 
 
 To decipher the ciphered text using the Caesar cipher and a key use the following command : 
@@ -49,8 +45,6 @@ java -cp target/FrequentialAnalysis-1.0.jar cipher.Main DeciphereCaesar pathToCi
 ``` 
 
 (if pathToDecipheredText doesn't exist, it will be created and the key must be between 0 and 25)
-
-<br/>
 
 #### - Frequential Analysis
 
@@ -66,8 +60,6 @@ java -cp target/FrequentialAnalysis-1.0.jar cipher.Main CalculateKeyCaesar pathT
 
 ### Vigenere 
 
-<br/>
-
 #### - Cipher 
 
 To cipher the processed text using the Vigenere cipher use the following command : 
@@ -78,8 +70,6 @@ java -cp target/FrequentialAnalysis-1.0.jar cipher.Main Vigenere pathToProcessed
 
 (if pathToCipheredText doesn't exist, it will be created and the key must be a word in lower case)
 
-<br/>
-
 #### - Decipher 
 
 To decipher the ciphered text using the Vigenere cipher and a key use the following command : 
@@ -89,8 +79,6 @@ java -cp target/FrequentialAnalysis-1.0.jar cipher.Main DecipherVigenere pathToC
 ``` 
 
 (if pathToDecipheredText doesn't exist, it will be created and the key must be a word in lower case)
-
-<br/>
 
 #### - Frequential Analysis
 
