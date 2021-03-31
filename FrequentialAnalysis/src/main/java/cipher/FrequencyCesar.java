@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author
+ * @author oscar
  */
 public class FrequencyCesar {
 
@@ -18,7 +18,6 @@ public class FrequencyCesar {
     public void makeFreqBoard(String input)
             throws FileNotFoundException, IOException {
         Scanner in = new Scanner(new FileReader(input));
-
         String line = in.nextLine();
         for (int i = 0; i < line.length(); i++) {
             freq[(int) (line.charAt(i) - 97)]++;
@@ -28,12 +27,19 @@ public class FrequencyCesar {
         }
     }
 
-    public void chiSquare() {
-        int minChi;
-        int key;
-        for (int possibleKey = 0; possibleKey < 26;) {
-            
+    public int chiSquare() {
+        double minChi = 10000;
+        int key = 0;
+        for (int possibleKey = 0; possibleKey < 26; possibleKey++) {
+            double chi = 0;
+            for (int letter = 0; letter < 26; letter++) {
+                chi += Math.pow(freq[(letter + possibleKey) % 26], 2) / freqEnglish[letter];
+            }
+            if (chi < minChi) {
+                minChi = chi;
+                key = possibleKey;
+            }
         }
+        return key;
     }
-
 }
