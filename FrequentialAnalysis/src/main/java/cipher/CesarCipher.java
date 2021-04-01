@@ -7,10 +7,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-/**
- *
- * @author oscar
- */
 public class CesarCipher {
 
     public static void cipher(String input, String output, int key)
