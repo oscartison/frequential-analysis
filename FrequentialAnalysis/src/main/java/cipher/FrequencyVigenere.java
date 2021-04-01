@@ -18,7 +18,7 @@ public class FrequencyVigenere {
             throws FileNotFoundException, IOException {
         Scanner in = new Scanner(new FileReader(input));
         String line = in.nextLine();
-        for (int i = 0; i < line.length() - 6 && distance.size() <20; i++) {
+        for (int i = 0; i < line.length() - 6 && distance.size() < 20; i++) {
             for (int j = i + 3; j < line.length() && distance.size() < 3; j++) {
                 if (line.charAt(i) == line.charAt(j)) {
                     int length_subString = 1;
@@ -29,10 +29,10 @@ public class FrequencyVigenere {
                             break;
                         }
                     }
-                    if (length_subString  ==  3) {
+                    if (length_subString == 3) {
                         distance.add(j - i);
                         gcdArray();
-                        if(distance.size() > 1 && gcd == 1) {
+                        if (distance.size() > 1 && gcd == 1) {
                             distance.remove(distance.size() - 1);
                         }
                     }
@@ -63,7 +63,7 @@ public class FrequencyVigenere {
         String line = in.nextLine();
         for (int x = 0; x < gcd; x++) {
             double[] freq = new double[26];
-            for (int i = x; i < line.length(); i+=gcd) {
+            for (int i = x; i < line.length(); i += gcd) {
                 freq[(int) (line.charAt(i) - 97)]++;
             }
             for (int i = 0; i < freq.length; i++) {
@@ -93,10 +93,11 @@ public class FrequencyVigenere {
         }
         return keys;
     }
-    
+
     public String getKey(String input) throws IOException {
         findRepetition(input);
         makeFreqBoard(input);
         return chiSquare();
     }
+
 }
